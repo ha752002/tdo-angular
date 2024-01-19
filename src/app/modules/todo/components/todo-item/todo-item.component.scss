@@ -1,0 +1,43 @@
+.todo-item {
+  border-radius: 8px;
+  padding: 20px 19px;
+  background: #ededed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 12px;
+
+    &:nth-child(1) {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &__button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.todo-item-warning {
+  background: #E6A23C;
+}
+
+.todo-item-success {
+  background: #67C23A;
+}
+
+.todo-item-danger {
+  background: #F56C6C;
+
+}

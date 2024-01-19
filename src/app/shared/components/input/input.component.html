@@ -1,0 +1,8 @@
+<input
+  class="input"
+  [(ngModel)]="inputValue"
+  (input)="onChange(inputValue)"
+  [ngStyle]="styleInput"
+  [placeholder]="placeholderInput"
+  (blur)="onTouched()"
+>

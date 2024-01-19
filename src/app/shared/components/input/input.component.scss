@@ -1,0 +1,22 @@
+.input {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  font-size: 21px;
+  color: #acacac;
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  &::placeholder {
+    color: gray;
+  }
+}
+
+
+
+

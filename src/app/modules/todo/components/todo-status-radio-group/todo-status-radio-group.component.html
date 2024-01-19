@@ -1,0 +1,7 @@
+<div class="radio-group">
+  <ng-template ngFor let-status [ngForOf]="todoStatusList">
+    <label class="custom-radio">
+      <input (change)="onChangeStatus(status.title)" [checked]="status.title === currentStatus" type="radio" name="status" [value]="status.title"/>{{status.title | uppercase}}
+    </label>
+  </ng-template>
+</div>

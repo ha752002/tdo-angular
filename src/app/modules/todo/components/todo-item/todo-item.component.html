@@ -1,0 +1,17 @@
+<div class="todo-item"
+     [class.todo-item-warning]="(todo.status !== TodoStatus.COMPLETED) && (remainTime.hours < 1) && (remainTime.hours > 0)"
+     [class.todo-item-success]="(todo.status === TodoStatus.COMPLETED)"
+     [class.todo-item-danger]="(todo.status !== TodoStatus.COMPLETED) && (remainTime.hours < 0)">
+  <div class="todo-item-info">
+    <div class="todo-item__title">{{todo.titleTask}}</div>
+    <div class="todo-item__title">{{todo.deadline | date: 'hh:mm dd-MM-yyyy'}}</div>
+    <ng-template [ngIf]="todo.status !== TodoStatus.COMPLETED">
+      <app-remain-time-todo-item [remainTime]="remainTime"></app-remain-time-todo-item>
+    </ng-template>
+  </div>
+  <div class="todo-item__button-group">
+    <app-toggle [checked]="toggleChecked" (checkedChange)="handleChangeTodoStatus($event)" [activeTitle]="TodoStatus.COMPLETED" [disableTitle]="TodoStatus.ACTIVE"></app-toggle>
+    <app-button (click)="handleEditButtonClick()" [title]="'edit'" [type]="ColorType.SUCCESS"></app-button>
+    <app-button (click)="handleDeleteButtonClick()" [title]="'delete'" [type]="ColorType.INFO"></app-button>
+  </div>
+</div>

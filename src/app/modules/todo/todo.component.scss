@@ -1,0 +1,14 @@
+.todo {
+  &-wrapper {
+    width: 60%;
+    margin: 70px auto;
+    background: white;
+    padding: 25px 25px;
+    border-radius: 5px;
+
+    .group-button{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

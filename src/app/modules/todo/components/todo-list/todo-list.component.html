@@ -1,0 +1,6 @@
+<div class="todo-list">
+  <ng-template ngFor let-todo [ngForOf]="todoList | todoStatusFilter: currentFilterStatus" [ngForTrackBy]="todoTrackBy">
+    <app-todo-item [todo]="todo"></app-todo-item>
+  </ng-template>
+</div>
+

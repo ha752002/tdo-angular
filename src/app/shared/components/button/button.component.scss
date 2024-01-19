@@ -1,0 +1,15 @@
+
+.app-button {
+  background: #409EFF;
+  color: white;
+  border: none;
+  border-radius: 21px;
+  aspect-ratio: 2/1;
+  cursor: pointer;
+  padding: 10px 20px;
+
+  &:hover {
+    background: #EBEEF5 !important;
+    color: black;
+  }
+}

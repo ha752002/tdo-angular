@@ -1,0 +1,16 @@
+<section class="todo-wrapper">
+  <div class="group-button">
+    <app-todo-status-radio-group></app-todo-status-radio-group>
+    <app-button [title]="'Add'" (click)="openCreateOrEditModal()"></app-button>
+  </div>
+  <app-todo-status-counter [todoList]="todoList"></app-todo-status-counter>
+  <app-todo-list [todoList]="todoList"></app-todo-list>
+</section>
+
+<app-modal [key]="createOrEditModalKey">
+  <app-create-or-edit-todo></app-create-or-edit-todo>
+</app-modal>
+
+<app-modal [key]="deleteModalKey">
+  <app-delete-confirm-todo></app-delete-confirm-todo>
+</app-modal>

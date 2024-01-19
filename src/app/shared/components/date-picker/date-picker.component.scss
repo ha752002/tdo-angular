@@ -1,0 +1,21 @@
+$primary-color: #3498db;
+
+input[type="datetime-local"] {
+  padding: 10px 20px;
+  font-size: 21px;
+  color: gray;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+}

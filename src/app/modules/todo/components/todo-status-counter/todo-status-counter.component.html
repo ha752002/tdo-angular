@@ -1,0 +1,7 @@
+<ul class="list-todo-status-counter">
+  <li *ngFor="let statusCount of Object.entries(todoList | statusCountTodoList)">
+    <span>{{statusCount[0] | titlecase}}</span>
+    <span>: {{statusCount[1]}}</span>
+  </li>
+</ul>
+

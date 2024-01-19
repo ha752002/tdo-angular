@@ -1,0 +1,28 @@
+
+.list-todo-status-counter {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 25px auto;
+  width: 70%;
+
+  li {
+    padding: 5px;
+    flex-grow: 1;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      font-style: italic;
+      margin-right: 5px;
+    }
+  }
+
+  li:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+}

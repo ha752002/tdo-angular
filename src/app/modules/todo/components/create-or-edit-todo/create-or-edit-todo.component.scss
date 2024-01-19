@@ -1,0 +1,19 @@
+#modal-create-or-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button-create-or-edit {
+  display: flex;
+  justify-content: center;
+}
+
+.title-modal {
+  color: #409EFF;
+  font-size: 2rem;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  padding: 10px 0;
+}

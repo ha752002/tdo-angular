@@ -1,0 +1,88 @@
+:host {
+  --handle-background-checked: #409EFF;
+  --background-checked: #409EFF;
+  --handle-background: #409EFF;
+  --track-border: 2px solid #8080804a;
+  --tracker-background: #409EFF;
+  --handle-size: 40px;
+}
+
+:host {
+  box-sizing: content-box;
+  position: relative;
+  width: 120px;
+  height: 33px;
+  padding: 12px;
+  margin-right: 61px;
+
+  &.toggle-checked {
+    .toggle-track {
+      background-color: var(--background-checked);
+    }
+
+    .toggle-handle {
+      background-color: var(--handle-background-checked);
+      left: 100%
+    }
+
+    .span-toggle-handle {
+      right: 60%;
+      color: white;
+    }
+  }
+}
+
+.toggle-track {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transition: background-color 0.16s ease 0s;
+  background: var(--tracker-backgroundd);
+  box-sizing: border-box;
+  border: var(--track-border);
+}
+
+.toggle-handle {
+  left: 0;
+  transform: translate3d(-50%, 0, 0);
+  position: absolute;
+  width: var(--handle-size);
+  height: var(--handle-size);
+  transition-duration: 0.2s;
+  transition-property: left, transform, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  will-change: left, transform, background-color;
+  contain: strict;
+  border-radius: 50%;
+  background: var(--handle-background);
+  box-sizing: border-box;
+  border: var(--handle-border);
+}
+
+.span-toggle-handle {
+  right: 40%;
+  transform: translate3d(50%, 0, 0);
+  position: absolute;
+  transition-duration: 0.46s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: right, transform, background-color;
+  box-sizing: border-box;
+}
+
+button {
+  left: 0;
+  top: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  outline: none;
+}

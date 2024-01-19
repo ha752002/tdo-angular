@@ -1,0 +1,43 @@
+.custom {
+  &-radio {
+    padding: 2px 2px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+  }
+}
+
+.radio-group {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  label.custom-radio {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #67C23A;
+    border-radius: 18px;
+    color: #fff;
+    background: #409EFF;
+    cursor: pointer;
+
+    &.active {
+      background: #007bff;
+      color: #fff;
+
+      &:hover {
+        background: #75c7ff;
+      }
+    }
+
+    &:hover {
+      background: #75c7ff;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+  }
+}
+

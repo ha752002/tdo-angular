@@ -1,0 +1,21 @@
+.title-form {
+  &-delete {
+    color: #409EFF;
+    font-size: 2rem;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  &-task {
+    border: 1px solid black;
+    padding: 10px 0px;
+    color: black;
+    margin: 20px 20px;
+  }
+}
+
+.delete-form-group {
+  text-align: center;
+}

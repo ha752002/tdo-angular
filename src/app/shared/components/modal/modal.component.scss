@@ -1,0 +1,22 @@
+.app-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: rgb(146 141 141 / 59%);
+  padding: 100px;
+  overflow: auto;
+
+  &-none {
+    display: none;
+  }
+
+  &-body {
+    padding: 20px;
+    background:#e1e1e1;
+    border-radius: 14px;
+  }
+}
+
+body.app-modal-open {
+  overflow: hidden;
+}

@@ -1,0 +1,9 @@
+<input class="input"
+       (input)="onChange(inputValue)"
+       [(ngModel)]="inputValue"
+       type="datetime-local"
+       [ngStyle]="styleInput"
+       [placeholder]="placeholderInput"
+       (blur)="onTouched()"
+>
+

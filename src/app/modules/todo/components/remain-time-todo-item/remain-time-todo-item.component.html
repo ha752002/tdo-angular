@@ -1,0 +1,5 @@
+<div *ngIf="remainTime!.hours < 0; then timeOutTemplate else remainTimeTemplate"></div>
+<ng-template #timeOutTemplate>
+  <p class="time-out">Time out</p>
+</ng-template>
+<ng-template #remainTimeTemplate>Remain: {{remainTime?.humanize}}</ng-template>

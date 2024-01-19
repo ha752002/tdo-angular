@@ -1,0 +1,18 @@
+<form id="modal-create-or-edit" [formGroup]="createOrEditFormGroup" (submit)="handleSubmitCreateOrEditForm()">
+  <ng-container *ngIf="isEditingTodo; then editTodoSlogan; else addNewTodoSlogan"></ng-container>
+  <app-input [placeholderInput]="'Enter task title'" [formControlName]="'titleTask'"></app-input>
+  <app-error-message *ngIf="checkError('titleTask')" [message]="getErrors('titleTask')!"></app-error-message>
+  <app-date-picker [formControlName]="'deadline'"></app-date-picker>
+  <app-error-message *ngIf="checkError('deadline')" [message]="getErrors('deadline')!"></app-error-message>
+  <div class="button-create-or-edit">
+    <app-button [buttonStyle]="{padding:'16px 38px'}" [title]="'Save'"></app-button>
+  </div>
+</form>
+
+<ng-template #addNewTodoSlogan>
+  <h4 class="title-modal">Add new todo</h4>
+</ng-template>
+
+<ng-template #editTodoSlogan>
+  <h4 class="title-modal">Edit todo</h4>
+</ng-template>
